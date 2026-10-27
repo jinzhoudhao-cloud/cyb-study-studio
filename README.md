@@ -1,4 +1,4 @@
-# CYB Study Studio
+# Study Studio
 
 [Live website / 在线使用](https://cyb-study-studio-hao-6-9.jzhou6.chatgpt.site)
 
