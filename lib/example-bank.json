@@ -1,0 +1,4 @@
+{
+ "id":"bilingual-example-v1","title":"Bilingual demo / 双语示例","glossary":{"password":"密码","authentication":"身份验证"},
+ "units":[{"id":"demo-mc","title":"Demo · Multiple choice / 示例选择题","type":"mc","chapter":0,"questions":[{"id":"demo-1","en":"Which action helps protect an account?","zh":"哪种做法有助于保护账号？","options":[{"id":"a","en":"Use a unique password","zh":"使用独立的密码"},{"id":"b","en":"Share your password publicly","zh":"公开分享密码"},{"id":"c","en":"Disable all authentication","zh":"关闭所有身份验证"},{"id":"d","en":"Reuse the same password everywhere","zh":"所有网站重复使用同一个密码"}],"answer":"a","explanationEn":"A unique password reduces the impact of a password leak on other accounts.","explanationZh":"独立密码可以减少密码泄露对其他账号的影响。"}]}]
+}

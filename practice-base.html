@@ -1,0 +1,2391 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#7662de"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="CYB Study"><title>CYB · Mobile Practice</title>
+<style>
+:root{--ink:#25283e;--muted:#818497;--purple:#7662de;--line:#e9e9f2;--bg:#f6f7fb}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif}button,input{font:inherit}button{cursor:pointer}button:focus-visible,[tabindex]:focus-visible{outline:3px solid #9b86f5;outline-offset:4px}button{border:0}button:disabled{opacity:.5;cursor:default}.app{display:grid;grid-template-columns:260px 1fr;min-height:100vh}aside{background:#fff;border-right:1px solid var(--line);padding:33px 20px;position:sticky;top:0;height:100vh;overflow:auto}.brand{display:flex;gap:12px;align-items:center;padding:0 12px 30px}.logo{background:var(--purple);color:white;border-radius:14px;font-weight:800;padding:7px 12px;font-size:23px}.brand b{font-size:17px;letter-spacing:-.4px}.brand small{display:block;color:var(--muted);font-size:11px;letter-spacing:2px}.nav-label{font-size:10px;letter-spacing:2px;color:var(--muted);margin:20px 12px 12px}.unit{display:flex;text-align:left;width:100%;align-items:center;gap:11px;background:transparent;border-radius:12px;padding:13px 10px;margin:4px 0;color:#65667e}.unit.active{background:#efecfd;color:#6552c2}.unit .num{font-size:12px;border:1px solid #dedee9;border-radius:9px;width:29px;height:29px;display:grid;place-items:center;flex:none}.unit strong{font-size:12px;display:block}.unit small{font-size:11px;color:#9091a3}.unit .done{margin-left:auto;color:#56a091}.side-note{border:1px solid var(--line);border-radius:13px;padding:15px;margin:24px 8px 12px;color:#77798e;font-size:12px}.side-note b{color:var(--ink)}.tools{display:flex;flex-wrap:wrap;gap:6px;margin:0 8px}.tools button{background:#f5f5fa;border-radius:7px;padding:6px 9px;color:#6e7085;font-size:11px}main{padding:30px 48px 45px;max-width:1320px;width:100%;margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;color:var(--muted);font-size:12px}.topbar .pill{background:#fff;padding:7px 13px;border:1px solid var(--line);border-radius:30px;color:#77718e}.topbar .pill:before{content:'●';color:#65b49f;margin-right:7px}.eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;color:var(--purple);text-transform:uppercase}h1{font-size:32px;line-height:1.25;letter-spacing:-1px;margin:10px 0}p.sub{color:var(--muted);margin:0 0 25px;font-size:13px}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 225px;gap:23px}.card{background:#fff;border:1px solid var(--line);border-radius:19px;padding:28px}.question-head{display:flex;justify-content:space-between;align-items:center;gap:12px}.badge{font-size:10px;letter-spacing:1px;font-weight:700;color:var(--purple);background:#f0edfc;padding:5px 9px;border-radius:6px}.translate{font-size:12px;color:#7360d1;background:#f4f1ff;border:1px solid #e6e0ff;padding:7px 11px;border-radius:8px}.progress{height:4px;background:#f0eff7;margin:24px 0 27px;border-radius:4px;overflow:hidden}.progress i{display:block;height:100%;background:var(--purple);transition:width .25s}.question{font-size:20px;line-height:1.7;font-weight:550;letter-spacing:-.3px;margin:0 0 11px}.cn{font-size:14px;color:#77748c;line-height:1.8;margin:9px 0 5px}.hint{color:#9696a6;font-size:11px;margin:13px 0 23px}.word{display:inline;background:transparent;padding:0;border-radius:2px;border-bottom:1px dotted #b5a4e9;color:inherit;font:inherit;line-height:inherit;text-align:inherit}.word:hover{background:#ede7ff;color:#6551c9}.options{display:grid;gap:11px}.option{display:flex;gap:14px;align-items:center;border:1px solid var(--edge);background:var(--tint);padding:15px 17px;border-radius:12px;cursor:pointer;transition:transform .15s,box-shadow .15s}.option:hover{transform:translateX(3px);box-shadow:0 3px 13px #27254d09}.letter{flex:none;width:32px;height:32px;border-radius:9px;color:var(--tone);background:white;border:1px solid var(--edge);font-size:12px;font-weight:700}.option-text{font-size:14px;line-height:1.55}.option .cn{font-size:12px;margin:3px 0 0}.foot{display:flex;justify-content:space-between;gap:10px;font-size:11px;color:#9999a9;margin-top:25px}.rail .card{padding:20px;margin-bottom:17px}.rail h3{font-size:13px;margin:0 0 15px}.grid-dots{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.dot{border-radius:7px;background:#f3f3f8;color:#8e90a3;height:29px;font-size:10px;display:grid;place-items:center}.dot.current{background:var(--purple);color:white}.dot.answered{background:#e7e4f5;color:#6e60a8}.legend{font-size:10px;color:var(--muted);margin-top:13px}.review-count{color:#e8a855;font-size:25px;font-weight:650;line-height:1.2}.rail p{font-size:11px;color:var(--muted);margin:7px 0 0}.note{background:#f0edfd!important;border:0!important}.note p{color:#8175a6}.primary{background:var(--purple);color:#fff;border-radius:10px;padding:12px 19px}.secondary{background:#efedf7;color:#72628e;border-radius:10px;padding:12px 17px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}.score{font-size:52px;letter-spacing:-3px;font-weight:750;line-height:1.2}.score small{font-size:20px;letter-spacing:0;color:#a1a0b2}.summary-top{display:flex;align-items:center;justify-content:space-between;margin:18px 0}.answer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.answer-card{text-align:left;background:#fafafd;border:1px solid var(--line);border-radius:11px;padding:13px;color:var(--ink)}.answer-card .answer-name{display:block;font-size:12px;margin-top:5px}.answer-card .mini{display:block;font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:4px}.status{font-size:10px;padding:3px 7px;border-radius:4px;display:inline-block;background:#e7f4ee;color:#388269}.status.wrong{background:#fff0ed;color:#c16c5f}.carry{padding:12px 15px;border-radius:10px;background:#f7f1e7;color:#967542;font-size:12px;margin-top:18px}dialog{border:1px solid var(--line);border-radius:20px;padding:28px;max-width:730px;width:calc(100% - 30px);max-height:85vh;overflow:auto;color:var(--ink)}dialog::backdrop{background:#29263c78;backdrop-filter:blur(4px)}.modal-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}.close{background:#f2f0f7;color:#827a96;border-radius:8px;padding:7px 11px}.review-option{border:1px solid var(--line);border-radius:10px;padding:12px;margin:9px 0;font-size:14px}.review-option.correct{border-color:#8fceb3;background:#eff9f4}.review-option.wrong{border-color:#e8b2a6;background:#fff4f0}.explain{background:#f3f0fc;padding:14px;border-radius:10px;margin-top:16px;font-size:13px}.tooltip{position:fixed;z-index:100;background:#2c2942;color:white;max-width:290px;box-shadow:0 8px 35px #211b3c30;border-radius:12px;padding:14px 17px;font-size:13px}.tooltip b{display:block;color:#cfc2ff;font-size:11px;margin-bottom:4px}.tooltip small{color:#bfb7d4;display:block;font-size:10px;margin-top:6px}.import-message{font-size:12px;color:#77658a;margin-top:12px}#file{display:none}.mobile-units{display:none}footer{margin-top:25px;font-size:10px;letter-spacing:1px;color:#aaa8ba}.empty{text-align:center;padding:50px 15px}.reviewlabel{color:#b68739;font-size:11px;margin-left:8px}
+@media(min-width:1500px){main{max-width:1400px;padding:50px 70px}.question{font-size:23px}.card{padding:35px}}
+@media(max-width:1100px){main{padding:25px}.workspace{grid-template-columns:minmax(0,1fr)}.rail{display:grid;grid-template-columns:1fr 1fr;gap:15px}.rail .note{display:none}.app{grid-template-columns:225px 1fr}.brand{padding-left:0}.brand b{font-size:15px}}
+@media(max-width:700px){.app{display:block}aside{height:auto;position:static;padding:15px;border-right:0;border-bottom:1px solid var(--line)}.brand{padding:0 0 10px}.brand small{display:none}.nav-label,.side-note{display:none}nav{display:flex;overflow:auto;gap:6px}.unit{min-width:153px;padding:8px}.unit .num{display:none}.tools{margin:10px 0 0}.tools button{padding:4px 8px}main{padding:20px 15px}.topbar{margin-bottom:22px}h1{font-size:26px}.card{padding:20px}.question{font-size:18px}.rail{grid-template-columns:1fr 1fr;gap:10px}.rail .card{padding:15px}.answer-grid{grid-template-columns:1fr}.option{padding:13px}.foot{font-size:10px}}
+ .option.selected{outline:2px solid var(--tone);outline-offset:2px}.option.selected .letter{background:var(--tone);color:white}.nav-controls{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:22px;flex-wrap:wrap}.dot{cursor:pointer}.dot[aria-current="step"]{outline:2px solid #c9bafa;outline-offset:2px}.selection-note{font-size:11px;color:#8e83a9;margin-top:13px}.mobile-unit-picker{display:none}.option,.dot,.letter,.translate,.nav-controls button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}.connect-link{font-size:12px;color:#7962dc;margin-right:15px}
+@media(max-width:700px){body{padding-bottom:env(safe-area-inset-bottom)}aside{padding:14px 16px}.brand{padding-bottom:12px}.mobile-unit-picker{display:block;margin-bottom:8px}#unit-select{width:100%;border:1px solid #ded7f0;background:#f4f0fd;padding:12px;border-radius:11px;color:#5d4c9a;font:inherit;font-size:14px}nav{display:none}.tools button{min-height:36px;font-size:11px}.question{line-height:1.8}.word{padding:2px 0}.option{min-height:64px}.letter{min-width:40px;min-height:40px}.translate{min-height:40px}.nav-controls button{min-height:44px}.dot{height:40px;min-width:36px;font-size:12px}.rail{grid-template-columns:1fr}.rail .card{margin-bottom:0}.grid-dots{grid-template-columns:repeat(5,1fr)}.foot{flex-wrap:wrap}.topbar{margin-bottom:20px}.question-head{flex-wrap:wrap}.card{padding:20px 17px}.cn{font-size:15px}dialog{padding:22px 18px}.mobile-mode main{max-width:780px}.brand .logo{font-size:20px}}
+@media(max-width:380px){.question{font-size:17px}main{padding:16px 10px}.nav-controls{gap:7px}.nav-controls button{font-size:12px;padding:10px 12px}.topbar{font-size:10px}}
+</style></head><body class="mobile-mode">
+<div class="app"><aside><div class="brand"><span class="logo">c.</span><div><b>Study Studio</b><small>CYBERSECURITY</small></div></div><div class="nav-label">YOUR LEARNING PATH · 学习单元</div><label class="mobile-unit-picker" for="unit-select"><select id="unit-select" aria-label="Choose unit / 选择学习单元"></select></label><nav id="units"></nav><div class="side-note"><b>Small steps. Stronger recall.</b><br>每个单元10题，错题在下个单元末尾再次出现，答对后移出待复习。</div><div class="tools"><button id="import">Import / 导入题库</button><button id="export">Export / 导出题库</button><button id="reset">Reset / 重置进度</button></div><input type="file" id="file" accept="application/json,.json"><p id="message" class="import-message" role="status"></p></aside><main><div class="topbar"><span>Workspace / Practice</span><a id="connect-link" class="connect-link" href="/connect" hidden>Phone / 手机访问</a><span class="pill">Self-paced · 不限时</span></div><div class="eyebrow">LEARN A LITTLE. REMEMBER MORE.</div><h1 id="title"></h1><p class="sub" id="subtitle"></p><div class="workspace"><section id="stage" class="card" aria-live="polite"></section><section class="rail"><div class="card"><h3>Question map <span style="color:#aaa;font-weight:400">/ 进度</span></h3><div id="map" class="grid-dots"></div><div class="legend">● Current 当前　 · Answered 已答</div></div><div class="card"><h3>Carry-over review / 错题</h3><div id="pending" class="review-count">0</div><p>Unresolved questions return after the next unit’s 10 questions.<br>先完成新题，再复习前面未答对的题。</p></div><div class="card note"><h3>A word, not the whole page.</h3><p>Tap an underlined word to see its Chinese meaning. Use 中文 for the full translation.<br><br>点虚线词语可查词；中文按钮显示本题和全部选项的翻译。查词不会提交答案。</p></div></section></div><footer>CYB STUDY STUDIO　 /　 PRACTICE WITH INTENTION</footer></main></div>
+<dialog id="review"><div id="review-body"></div></dialog><div id="tooltip" class="tooltip" role="status" hidden></div>
+<script id="bank" type="application/json">{
+  "version": 1,
+  "id": "cyb-ch6-9-v1",
+  "title": "CYB Study Studio",
+  "description": "Chapters 6–9 · 80 questions",
+  "glossary": {
+    "access control": "访问控制",
+    "authentication": "身份验证",
+    "authorization": "授权",
+    "identification": "身份识别",
+    "accountability": "可追责性",
+    "biometrics": "生物识别",
+    "retinal scans": "视网膜扫描",
+    "privacy": "隐私",
+    "accuracy": "准确性",
+    "reaction time": "反应时间",
+    "dynamism": "动态性",
+    "acceptability": "可接受性",
+    "compromise": "攻破；损害",
+    "expires": "到期",
+    "password": "密码",
+    "passphrases": "口令短语",
+    "passphrase": "口令短语",
+    "least privilege": "最小权限",
+    "security through obscurity": "通过隐蔽实现安全",
+    "need to know": "按需知悉",
+    "separation of duties": "职责分离",
+    "infrastructure": "基础设施",
+    "firmware": "固件",
+    "security kernel": "安全内核",
+    "coprocessor": "协处理器",
+    "smart card": "智能卡",
+    "token": "令牌",
+    "logical": "逻辑的",
+    "physical": "物理的",
+    "account lockout": "账户锁定",
+    "constrained": "受限的",
+    "degausser": "消磁器",
+    "temporal isolation": "时间隔离",
+    "rule-based": "基于规则的",
+    "single sign-on": "单点登录",
+    "digital signature": "数字签名",
+    "public key": "公钥",
+    "private key": "私钥",
+    "confidentiality": "机密性",
+    "integrity": "完整性",
+    "nonrepudiation": "不可否认性",
+    "ciphertext": "密文",
+    "plaintext": "明文",
+    "encryption": "加密",
+    "decryption": "解密",
+    "hash functions": "哈希函数",
+    "hash": "哈希；散列",
+    "checksum": "校验和",
+    "forgeries": "伪造",
+    "tamperproof": "防篡改的",
+    "cryptanalysis": "密码分析",
+    "substitution": "替换",
+    "transposition": "换位",
+    "steganographic": "隐写式的",
+    "asymmetric": "非对称的",
+    "symmetric": "对称的",
+    "cipher": "密码算法",
+    "quantum": "量子的",
+    "elliptic curve": "椭圆曲线",
+    "algorithm": "算法",
+    "keyspace": "密钥空间",
+    "revocation": "撤销",
+    "known-plaintext attack": "已知明文攻击",
+    "stream cipher": "流密码",
+    "block cipher": "分组密码",
+    "malware": "恶意软件",
+    "virus": "病毒",
+    "worms": "蠕虫",
+    "worm": "蠕虫",
+    "trojans": "木马",
+    "trojan horse": "特洛伊木马",
+    "trojan": "木马",
+    "ransomware": "勒索软件",
+    "spear phishing": "鱼叉式网络钓鱼",
+    "phishing": "网络钓鱼",
+    "pharming": "域名欺骗；网站重定向欺诈",
+    "command injection": "命令注入",
+    "cross-site scripting": "跨站脚本",
+    "SQL": "结构化查询语言",
+    "XML": "可扩展标记语言",
+    "LDAP": "轻量目录访问协议",
+    "injection": "注入",
+    "denial of service": "拒绝服务",
+    "SYN flood": "SYN洪泛攻击",
+    "logic bomb": "逻辑炸弹",
+    "remote access tool": "远程访问工具",
+    "polymorphic": "多态的",
+    "macro virus": "宏病毒",
+    "reconnaissance": "侦察",
+    "Whois": "域名注册信息查询",
+    "session hijacking": "会话劫持",
+    "headers": "标头",
+    "backdoor": "后门",
+    "defense in depth": "纵深防御",
+    "botnets": "僵尸网络",
+    "social engineering": "社会工程",
+    "credentials": "凭据",
+    "credential harvesting": "凭据收集",
+    "accreditation": "系统认可",
+    "authorizing official": "授权官员",
+    "certifier": "认证评估人员",
+    "security awareness": "安全意识",
+    "clearance": "安全许可",
+    "classification": "分类；分级",
+    "mandatory vacations": "强制休假",
+    "job rotation": "岗位轮换",
+    "functional policy": "职能性策略",
+    "functional policies": "职能性策略",
+    "intimidation": "恐吓",
+    "name dropping": "借用他人名号",
+    "ownership": "所有权；责任归属",
+    "outsourcing": "外包",
+    "baseline": "基线",
+    "guideline": "指南",
+    "procedure": "操作规程",
+    "procedures": "操作规程",
+    "policy": "策略",
+    "standards": "标准",
+    "formatting": "格式化",
+    "degaussing": "消磁",
+    "overwriting": "覆盖写入",
+    "expertise": "专业知识和技能",
+    "remediation": "整改；修复",
+    "data owner": "数据所有者",
+    "configuration": "配置",
+    "risk": "风险",
+    "threats": "威胁",
+    "vulnerabilities": "漏洞",
+    "permissions": "权限",
+    "security": "安全",
+    "network": "网络",
+    "encrypted": "已加密的",
+    "key": "密钥",
+    "message": "消息",
+    "access": "访问",
+    "data": "数据",
+    "Accuracy": "准确性",
+    "Reaction time": "反应时间",
+    "Dynamism": "动态性",
+    "Acceptability": "可接受性",
+    "Enables a 30-day password change policy": "每30天更换密码",
+    "Least privilege": "最小权限",
+    "Security through obscurity": "通过隐蔽实现安全",
+    "Need to know": "按需知悉",
+    "Separation of duties": "职责分离",
+    "Remote Authentication Dial-In User Service (RADIUS)": "远程用户拨号认证服务",
+    "Infrastructure as a Service (IaaS)": "基础设施即服务",
+    "Platform as a Service (PaaS)": "平台即服务",
+    "Software as a Service (SaaS)": "软件即服务",
+    "CPU": "中央处理器",
+    "memory": "内存",
+    "Answers the question \"who is asking to access the asset?\"": "回答谁正在请求访问资产",
+    "Verifies that requestors are who they claim to be": "验证请求者确实是其声称的身份",
+    "Determines how actions can be traced to an individual": "确定如何将操作追溯到个人",
+    "Smart card and personal identification number (PIN)": "智能卡和个人识别码",
+    "PIN and password": "个人识别码和密码",
+    "Password and security questions": "密码和安全问题",
+    "Token and smart card": "令牌和智能卡",
+    "Key for a lock": "开锁钥匙",
+    "Password": "密码",
+    "Access card": "门禁卡",
+    "Fence": "围栏",
+    "Account lockout policies": "账户锁定策略",
+    "Audit login events": "审核登录事件",
+    "Passphrase usage": "使用口令短语",
+    "Multifactor authentication": "多因素认证",
+    "Database views": "数据库视图",
+    "Encryption": "加密",
+    "Menus": "菜单",
+    "Physically constrained user interfaces": "物理受限用户界面",
+    "True": "正确",
+    "False": "错误",
+    "Alice's public key": "Alice的公钥",
+    "Alice's private key": "Alice的私钥",
+    "Bob's public key": "Bob的公钥",
+    "Bob's private key": "Bob的私钥",
+    "Confidentiality": "机密性",
+    "Integrity": "完整性",
+    "Authentication": "身份验证",
+    "Nonrepudiation": "不可否认性",
+    "Hashing": "哈希运算",
+    "Decryption": "解密",
+    "Validation": "验证",
+    "Encrypt the plaintext of a target message": "加密目标消息的明文",
+    "Determine the key used to encrypt a target message": "确定加密目标消息的密钥",
+    "Derive the algorithm used by a particular cipher": "推导特定密码使用的算法",
+    "Substitution": "替换密码",
+    "Steganographic": "隐写式",
+    "Transposition": "换位密码",
+    "Asymmetric": "非对称密码",
+    "Message authentication": "消息认证",
+    "Digital signature": "数字签名",
+    "Receipt and confirmation": "收讫与确认",
+    "Asymmetric, block, substitution": "非对称、分组、替换",
+    "Asymmetric, stream, transposition": "非对称、流式、换位",
+    "Symmetric, stream, substitution": "对称、流式、替换",
+    "Symmetric, block, transposition": "对称、分组、换位",
+    "Quantum cryptography": "量子密码学",
+    "Asymmetric cryptography": "非对称密码学",
+    "Elliptic curve cryptography": "椭圆曲线密码学",
+    "Classic cryptography": "经典密码学",
+    "Unexplained decrease in available disk space": "可用磁盘空间无故减少",
+    "Unexpected error messages": "意外错误消息",
+    "Unexpected power failures": "意外断电",
+    "Sudden sluggishness of applications": "应用突然变慢",
+    "Structured Query Language (SQL) injection": "SQL注入",
+    "Command injection": "命令注入",
+    "Extensible Markup Language (XML) injection": "XML注入",
+    "Cross-site scripting (XSS)": "跨站脚本攻击",
+    "Spear phishing": "鱼叉式网络钓鱼",
+    "Pharming": "域名欺骗／网站重定向欺诈",
+    "Ransomware": "勒索软件",
+    "Logic bomb": "逻辑炸弹",
+    "Synchronize (SYN) flood": "SYN洪泛攻击",
+    "Ping": "Ping连通性检测",
+    "Simple Network Management Protocol (SNMP) agent": "SNMP代理",
+    "Network mapper (Nmap)": "Nmap网络扫描工具",
+    "Remote Access Tool (RAT)": "远程访问工具",
+    "Lightweight Directory Access Protocol (LDAP) injection": "LDAP注入",
+    "Polymorphic virus": "多态病毒",
+    "Retro virus": "反杀毒病毒",
+    "Cross-platform virus": "跨平台病毒",
+    "Macro virus": "宏病毒",
+    "Simple Network Management Protocol (SNMP)": "简单网络管理协议",
+    "Domain Name System (DNS)": "域名系统",
+    "Virus": "病毒",
+    "Worm": "蠕虫",
+    "Trojan horse": "特洛伊木马",
+    "Session hijacking": "会话劫持",
+    "Certifier": "认证评估人员",
+    "Authorizing official (AO)": "授权官员",
+    "System owner": "系统所有者",
+    "System administrator": "系统管理员",
+    "Teach users about security objectives": "讲解安全目标",
+    "Inform users about trends and threats in security": "告知安全趋势和威胁",
+    "Motivate users to comply with security policy": "鼓励遵守安全策略",
+    "Punish users who violate policy": "惩罚违反策略的用户",
+    "Job rotation": "岗位轮换",
+    "Security awareness": "安全意识",
+    "Limiting access": "限制访问",
+    "Mandatory vacations": "强制休假",
+    "Environment": "环境",
+    "Functional policies in support of organization policy": "支持组织策略的职能性策略",
+    "Organizational security policy": "组织安全策略",
+    "Supporting mechanisms": "支持机制",
+    "Intimidation": "恐吓",
+    "Name dropping": "借用他人名号",
+    "Appeal for help": "请求帮助",
+    "Phishing": "网络钓鱼",
+    "Adherence to policy": "遵守策略",
+    "Ownership": "所有权与责任归属",
+    "Privacy": "隐私",
+    "Risk": "风险",
+    "Baseline": "基线",
+    "Policy": "策略",
+    "Guideline": "指南",
+    "Procedure": "操作规程",
+    "Formatting": "格式化",
+    "Degaussing": "消磁",
+    "Physical destruction": "物理销毁",
+    "Repeatedly overwriting data": "反复覆盖数据",
+    "Higher degree of privacy": "更高程度的隐私",
+    "Access to a higher level of expertise": "更高水平的专业知识和技能",
+    "Developing in-house talent": "培养内部人才",
+    "Building internal knowledge": "积累内部知识",
+    "biometric": "生物识别的",
+    "badge": "徽章；身份牌",
+    "synchronous": "同步的",
+    "asynchronous": "异步的"
+  },
+  "units": [
+    {
+      "id": "ch6-mc",
+      "title": "Ch6 · Multiple choice",
+      "titleZh": "Ch6 · 选择题",
+      "questions": [
+        {
+          "id": "6-1",
+          "en": "Devaki is evaluating different biometric systems. She understands that users might not want to subject themselves to retinal scans due to privacy concerns. Which concern of a biometric system is she considering?",
+          "zh": "Devaki正在评估不同的生物识别系统。她知道用户可能因隐私顾虑不愿接受视网膜扫描。她正在考虑生物识别系统的哪一方面？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Accuracy",
+              "zh": "准确性"
+            },
+            {
+              "id": "o1",
+              "en": "Reaction time",
+              "zh": "反应时间"
+            },
+            {
+              "id": "o2",
+              "en": "Dynamism",
+              "zh": "动态性"
+            },
+            {
+              "id": "o3",
+              "en": "Acceptability",
+              "zh": "可接受性"
+            }
+          ],
+          "answer": "o3",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "6-2",
+          "en": "Lincoln is a network security specialist. He is updating the password policy for his company's computing infrastructure. His primary method of improving password policy involves lowering the chance that an attacker can compromise and use the password before it expires. What does he do?",
+          "zh": "Lincoln是一名网络安全专家，正在更新公司的计算基础设施密码策略。他主要希望降低攻击者在密码过期之前破解并使用密码的可能性。他会怎么做？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Enables a 30-day password change policy",
+              "zh": "每30天更换密码"
+            },
+            {
+              "id": "o1",
+              "en": "Requires all passwords to contain at least eight alphanumeric characters",
+              "zh": "至少8个字母数字字符"
+            },
+            {
+              "id": "o2",
+              "en": "Mandates that no password includes words common in an English dictionary",
+              "zh": "禁止英语词典常见词"
+            },
+            {
+              "id": "o3",
+              "en": "Forbids a password being changed to any of the previous 10 passwords listed in the password history",
+              "zh": "禁止重复最近10次密码"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "6-3",
+          "en": "Tomahawk Industries develops weapons control systems for the military. The company designed a system that requires two different officers to enter their access codes before allowing the system to engage. Which principle of security is this following?",
+          "zh": "Tomahawk Industries为军方开发武器控制系统。公司设计的系统要求两名不同军官输入各自的访问代码，才能允许系统启动。这遵循什么安全原则？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Least privilege",
+              "zh": "最小权限"
+            },
+            {
+              "id": "o1",
+              "en": "Security through obscurity",
+              "zh": "通过隐蔽实现安全"
+            },
+            {
+              "id": "o2",
+              "en": "Need to know",
+              "zh": "按需知悉"
+            },
+            {
+              "id": "o3",
+              "en": "Separation of duties",
+              "zh": "职责分离"
+            }
+          ],
+          "answer": "o3",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "6-4",
+          "en": "Keisha is a network administrator. She wants a cloud-based service that will allow her to load operating systems on virtual machines and manage them as if they were local servers. What service is Keisha looking for?",
+          "zh": "Keisha是一名网络管理员。她希望使用一种云服务，允许她在虚拟机上安装操作系统，并像管理本地服务器一样管理它们。她需要哪种服务？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Remote Authentication Dial-In User Service (RADIUS)",
+              "zh": "远程用户拨号认证服务"
+            },
+            {
+              "id": "o1",
+              "en": "Infrastructure as a Service (IaaS)",
+              "zh": "基础设施即服务"
+            },
+            {
+              "id": "o2",
+              "en": "Platform as a Service (PaaS)",
+              "zh": "平台即服务"
+            },
+            {
+              "id": "o3",
+              "en": "Software as a Service (SaaS)",
+              "zh": "软件即服务"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "6-5",
+          "en": "The ___________ is the central part of a computing environment's hardware, software, and firmware that enforces access control.",
+          "zh": "计算环境中，由硬件、软件和固件组成、执行访问控制的核心是什么？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "security kernel",
+              "zh": "安全内核"
+            },
+            {
+              "id": "o1",
+              "en": "CPU",
+              "zh": "中央处理器"
+            },
+            {
+              "id": "o2",
+              "en": "memory",
+              "zh": "内存"
+            },
+            {
+              "id": "o3",
+              "en": "coprocessor",
+              "zh": "协处理器"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "6-6",
+          "en": "Wen is a network engineer. For several months, he has been designing a system of controls to allow and restrict access to network assets based on various methods and information. He is currently configuring the authentication method. What does this method do?",
+          "zh": "Wen是一名网络工程师。几个月来，他根据各种方法和信息设计控制体系，以允许或限制对网络资产的访问。现在他正在配置身份验证方法。这种方法有什么作用？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Answers the question \"who is asking to access the asset?\"",
+              "zh": "回答谁正在请求访问资产"
+            },
+            {
+              "id": "o1",
+              "en": "Verifies that requestors are who they claim to be",
+              "zh": "验证请求者确实是其声称的身份"
+            },
+            {
+              "id": "o2",
+              "en": "Grants or denies a requestor access and what they can do on a network",
+              "zh": "授予或拒绝访问及网络操作权限"
+            },
+            {
+              "id": "o3",
+              "en": "Determines how actions can be traced to an individual",
+              "zh": "确定如何将操作追溯到个人"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "6-7",
+          "en": "What is an example of two-factor authentication (2FA)?",
+          "zh": "哪项属于双因素认证？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Smart card and personal identification number (PIN)",
+              "zh": "智能卡和个人识别码"
+            },
+            {
+              "id": "o1",
+              "en": "PIN and password",
+              "zh": "个人识别码和密码"
+            },
+            {
+              "id": "o2",
+              "en": "Password and security questions",
+              "zh": "密码和安全问题"
+            },
+            {
+              "id": "o3",
+              "en": "Token and smart card",
+              "zh": "令牌和智能卡"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "6-8",
+          "en": "What is an example of a logical access control?",
+          "zh": "哪项属于逻辑访问控制？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Key for a lock",
+              "zh": "开锁钥匙"
+            },
+            {
+              "id": "o1",
+              "en": "Password",
+              "zh": "密码"
+            },
+            {
+              "id": "o2",
+              "en": "Access card",
+              "zh": "门禁卡"
+            },
+            {
+              "id": "o3",
+              "en": "Fence",
+              "zh": "围栏"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "6-9",
+          "en": "Jackson is a cybercriminal. He is attempting to keep groups of a company's high-level users from accessing their work network accounts by abusing a policy designed to protect employee accounts. Jackson attempts to log in to their work accounts repeatedly using false passwords. What security method is he taking advantage of?",
+          "zh": "Jackson是一名网络犯罪分子。他滥用一项旨在保护员工账户的策略，试图阻止公司一批高级用户访问工作网络账户。他反复使用错误密码尝试登录这些账户。他利用了什么安全机制？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Account lockout policies",
+              "zh": "账户锁定策略"
+            },
+            {
+              "id": "o1",
+              "en": "Audit login events",
+              "zh": "审核登录事件"
+            },
+            {
+              "id": "o2",
+              "en": "Passphrase usage",
+              "zh": "使用口令短语"
+            },
+            {
+              "id": "o3",
+              "en": "Multifactor authentication",
+              "zh": "多因素认证"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "6-10",
+          "en": "An automatic teller machine (ATM) uses a form of constrained user interface to limit the user's ability to access resources in the system. Specifically for ATMs, which method is being used?",
+          "zh": "自动柜员机（ATM）使用一种受限用户界面，限制用户访问系统资源的能力。具体到ATM，使用的是哪种方法？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Database views",
+              "zh": "数据库视图"
+            },
+            {
+              "id": "o1",
+              "en": "Encryption",
+              "zh": "加密"
+            },
+            {
+              "id": "o2",
+              "en": "Menus",
+              "zh": "菜单"
+            },
+            {
+              "id": "o3",
+              "en": "Physically constrained user interfaces",
+              "zh": "物理受限用户界面"
+            }
+          ],
+          "answer": "o3",
+          "explanationEn": "The course marks physically constrained user interfaces as correct for this ATM question.",
+          "explanationZh": "这道ATM题按课程评分选“物理受限用户界面”。"
+        }
+      ]
+    },
+    {
+      "id": "ch6-tf",
+      "title": "Ch6 · True / False",
+      "titleZh": "Ch6 · 判断题",
+      "questions": [
+        {
+          "id": "6-11",
+          "en": "True or False? Authentication by characteristics/biometrics is based on something you have, such as a smart card, a key, a badge, or either a synchronous or asynchronous token.",
+          "zh": "生物识别认证基于你拥有的东西，如智能卡、钥匙、徽章或令牌。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "Biometrics is something you are; a card or token is something you have.",
+          "explanationZh": "生物识别是“你是什么”；智能卡或令牌是“你拥有什么”。",
+          "glossary": {
+            "key": "钥匙"
+          }
+        },
+        {
+          "id": "6-12",
+          "en": "True or False? A smart card is an example of a logical access control.",
+          "zh": "智能卡属于逻辑访问控制。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "The course classifies the smart card in this question as a physical access control.",
+          "explanationZh": "此题课程将智能卡归为物理访问控制。"
+        },
+        {
+          "id": "6-13",
+          "en": "True or False? Common methods used to identify a user to a system include username, smart card, and biometrics.",
+          "zh": "用户名、智能卡和生物识别都可用于识别用户。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "6-14",
+          "en": "True or False? Physically disabled users might have difficulty with biometric system accessibility, specifically with performance-based biometrics.",
+          "zh": "残障用户可能难以使用基于行为表现的生物识别系统。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "6-15",
+          "en": "True or False? Single sign-on (SSO) can provide for greater security because with only one password to remember, users are generally willing to use stronger passwords.",
+          "zh": "单点登录只需记住一个密码，因此用户通常更愿意使用强密码，可能提高安全性。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "6-16",
+          "en": "True or False? A degausser creates a magnetic field that erases data from magnetic storage media.",
+          "zh": "消磁器通过磁场清除磁性存储介质的数据。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "6-17",
+          "en": "True or False? Temporal isolation is commonly used in combination with rule-based access control.",
+          "zh": "时间隔离通常与基于规则的访问控制结合使用。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "False, according to the corrected course grading.",
+          "explanationZh": "按课程最终评分更正，此题为错误。"
+        },
+        {
+          "id": "6-18",
+          "en": "True or False? Passphrases are less secure than passwords.",
+          "zh": "口令短语比密码更不安全。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "6-19",
+          "en": "True or False? Authentication by knowledge is based on something the user knows, such as a password, passphrase, or personal identification number (PIN).",
+          "zh": "知识型认证基于用户知道的信息，如密码、口令短语或个人识别码。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "6-20",
+          "en": "True or False? Authentication by action is based on something you do, such as typing.",
+          "zh": "行为型认证基于用户的动作，例如打字。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        }
+      ]
+    },
+    {
+      "id": "ch7-mc",
+      "title": "Ch7 · Multiple choice",
+      "titleZh": "Ch7 · 选择题",
+      "questions": [
+        {
+          "id": "7-1",
+          "en": "Bob received a message from Alice that contains a digital signature. What cryptographic key does Bob use to verify the digital signature?",
+          "zh": "Bob收到Alice发送的一条包含数字签名的消息。Bob使用哪个密码学密钥来验证该数字签名？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Alice's public key",
+              "zh": "Alice的公钥"
+            },
+            {
+              "id": "o1",
+              "en": "Alice's private key",
+              "zh": "Alice的私钥"
+            },
+            {
+              "id": "o2",
+              "en": "Bob's public key",
+              "zh": "Bob的公钥"
+            },
+            {
+              "id": "o3",
+              "en": "Bob's private key",
+              "zh": "Bob的私钥"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "7-2",
+          "en": "When Alice receives a message from Bob, she wants to be able to demonstrate to Miriam that the message actually came from Bob. What goal of cryptography is Alice attempting to achieve?",
+          "zh": "Alice收到Bob的消息后，希望能够向Miriam证明，这条消息确实来自Bob。Alice正在尝试实现密码学的哪个目标？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Confidentiality",
+              "zh": "机密性"
+            },
+            {
+              "id": "o1",
+              "en": "Integrity",
+              "zh": "完整性"
+            },
+            {
+              "id": "o2",
+              "en": "Authentication",
+              "zh": "身份验证"
+            },
+            {
+              "id": "o3",
+              "en": "Nonrepudiation",
+              "zh": "不可否认性"
+            }
+          ],
+          "answer": "o3",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "7-3",
+          "en": "Maria receives a ciphertext message from her colleague Wen. What type of function does Maria need to use to read the plaintext message?",
+          "zh": "Maria收到同事Wen发送的密文消息。Maria需要使用哪种功能才能读取明文消息？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Encryption",
+              "zh": "加密"
+            },
+            {
+              "id": "o1",
+              "en": "Hashing",
+              "zh": "哈希运算"
+            },
+            {
+              "id": "o2",
+              "en": "Decryption",
+              "zh": "解密"
+            },
+            {
+              "id": "o3",
+              "en": "Validation",
+              "zh": "验证"
+            }
+          ],
+          "answer": "o2",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "7-4",
+          "en": "Which of the following is  not  true of hash functions?",
+          "zh": "关于哈希函数，以下哪项说法不正确？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Hash functions help detect forgeries by computing a checksum of a message and then combining it with a cryptographic function so that the result is tamperproof.",
+              "zh": "通过消息校验和结合密码学函数检测伪造并防止篡改"
+            },
+            {
+              "id": "o1",
+              "en": "The hashes produced by a specific hash function may vary in size.",
+              "zh": "特定哈希函数生成的哈希值长度可以变化"
+            },
+            {
+              "id": "o2",
+              "en": "A hash is a checksum designed so that no one can forge a message in a way that will result in the same hash as a legitimate message.",
+              "zh": "哈希校验和旨在防止伪造消息产生与合法消息相同的哈希值"
+            },
+            {
+              "id": "o3",
+              "en": "The output from the message digest algorithm (MD5) or the Secure Hash Algorithm (SHA) hash provides input for an asymmetric key algorithm that uses a private key as input.",
+              "zh": "MD5或SHA的哈希输出可作为使用私钥的非对称密钥算法的输入"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "A specific hash algorithm produces a fixed-size digest. This asks for the false statement.",
+          "explanationZh": "特定哈希算法输出固定长度的摘要。本题要求选错误说法。"
+        },
+        {
+          "id": "7-5",
+          "en": "Which of the following is  not  an objective of cryptanalysis, the process of breaking codes?",
+          "zh": "以下哪项不是密码分析（破解密码）的目标？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Encrypt the plaintext of a target message",
+              "zh": "加密目标消息的明文"
+            },
+            {
+              "id": "o1",
+              "en": "Determine the key used to encrypt a target message",
+              "zh": "确定加密目标消息的密钥"
+            },
+            {
+              "id": "o2",
+              "en": "Derive the algorithm used by a particular cipher",
+              "zh": "推导特定密码使用的算法"
+            },
+            {
+              "id": "o3",
+              "en": "Solve the general mathematical problem underlying the cryptography",
+              "zh": "解决密码学依据的一般数学问题"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "7-6",
+          "en": "Which type of cipher works by rearranging the characters in a message?",
+          "zh": "哪种密码通过重新排列消息中的字符来工作？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Substitution",
+              "zh": "替换密码"
+            },
+            {
+              "id": "o1",
+              "en": "Steganographic",
+              "zh": "隐写式"
+            },
+            {
+              "id": "o2",
+              "en": "Transposition",
+              "zh": "换位密码"
+            },
+            {
+              "id": "o3",
+              "en": "Asymmetric",
+              "zh": "非对称密码"
+            }
+          ],
+          "answer": "o2",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "7-7",
+          "en": "Security objectives add value to relationships between businesses or between businesses and their customers. Which objective binds a message or data to a specific entity?",
+          "zh": "安全目标为企业之间或企业与客户之间的关系增加价值。哪个目标将消息或数据绑定到特定实体？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Message authentication",
+              "zh": "消息认证"
+            },
+            {
+              "id": "o1",
+              "en": "Digital signature",
+              "zh": "数字签名"
+            },
+            {
+              "id": "o2",
+              "en": "Receipt and confirmation",
+              "zh": "收讫与确认"
+            },
+            {
+              "id": "o3",
+              "en": "Nonrepudiation",
+              "zh": "不可否认性"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "7-8",
+          "en": "Bob is sending a message to Alice. He wants to ensure that nobody can read the content of the message while it is in transit. What goal of cryptography is Bob attempting to achieve?",
+          "zh": "Bob正在给Alice发送消息。他希望确保消息在传输过程中，没有其他人能够读取其内容。Bob正在尝试实现密码学的哪个目标？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Confidentiality",
+              "zh": "机密性"
+            },
+            {
+              "id": "o1",
+              "en": "Integrity",
+              "zh": "完整性"
+            },
+            {
+              "id": "o2",
+              "en": "Authentication",
+              "zh": "身份验证"
+            },
+            {
+              "id": "o3",
+              "en": "Nonrepudiation",
+              "zh": "不可否认性"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "7-9",
+          "en": "Which set of characteristics describes the Caesar cipher accurately?",
+          "zh": "哪组特征准确描述凯撒密码？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Asymmetric, block, substitution",
+              "zh": "非对称、分组、替换"
+            },
+            {
+              "id": "o1",
+              "en": "Asymmetric, stream, transposition",
+              "zh": "非对称、流式、换位"
+            },
+            {
+              "id": "o2",
+              "en": "Symmetric, stream, substitution",
+              "zh": "对称、流式、替换"
+            },
+            {
+              "id": "o3",
+              "en": "Symmetric, block, transposition",
+              "zh": "对称、分组、换位"
+            }
+          ],
+          "answer": "o2",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "7-10",
+          "en": "Which approach to cryptography uses highly parallel algorithms that could solve problems in a fraction of the time needed by conventional computers?",
+          "zh": "哪种密码学方法使用高度并行的算法，能够以传统计算机所需时间的一小部分解决问题？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Quantum cryptography",
+              "zh": "量子密码学"
+            },
+            {
+              "id": "o1",
+              "en": "Asymmetric cryptography",
+              "zh": "非对称密码学"
+            },
+            {
+              "id": "o2",
+              "en": "Elliptic curve cryptography",
+              "zh": "椭圆曲线密码学"
+            },
+            {
+              "id": "o3",
+              "en": "Classic cryptography",
+              "zh": "经典密码学"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        }
+      ]
+    },
+    {
+      "id": "ch7-tf",
+      "title": "Ch7 · True / False",
+      "titleZh": "Ch7 · 判断题",
+      "questions": [
+        {
+          "id": "7-11",
+          "en": "True or False? A private key cipher is also called an asymmetric key cipher.",
+          "zh": "私钥密码也叫非对称密钥密码。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "7-12",
+          "en": "True or False? The U.S. government currently has no standard for creating cryptographic keys for classified applications.",
+          "zh": "美国政府目前没有为机密应用制定密钥生成标准。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "7-13",
+          "en": "True or False? An algorithm is a repeatable process that produces the same result when it receives the same input.",
+          "zh": "算法是可重复的过程，相同输入产生相同结果。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "7-14",
+          "en": "True or False? A block cipher encrypts one byte (or bit) at a time, whereas a stream cipher encrypts an entire block of data at a time.",
+          "zh": "分组密码一次加密一字节或一位，流密码一次加密整个数据块。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "The descriptions of block and stream ciphers are reversed.",
+          "explanationZh": "分组密码和流密码的描述颠倒了。"
+        },
+        {
+          "id": "7-15",
+          "en": "True or False? Whereas a cipher performs a particular task, a key gives the specific directions for how to do it.",
+          "zh": "密码算法执行任务，密钥提供完成任务的具体指示。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "7-16",
+          "en": "True or False? Symmetric key ciphers require that both parties first exchange keys to be able to securely communicate.",
+          "zh": "对称密钥密码要求双方先交换密钥，才能安全通信。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "7-17",
+          "en": "True or False? In a known-plaintext attack (KPA), the cryptanalyst has access only to a segment of encrypted data and has no choice as to what that data might be.",
+          "zh": "已知明文攻击中，分析者只能获得一段密文，不能选择其内容。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "Known-plaintext attacks include access to plaintext and its corresponding ciphertext.",
+          "explanationZh": "已知明文攻击掌握明文及其对应密文。"
+        },
+        {
+          "id": "7-18",
+          "en": "True or False? You must always use the same algorithm to encrypt information and decrypt the same information.",
+          "zh": "加密和解密同一信息必须始终使用同一算法。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "7-19",
+          "en": "True or False? In cryptography, a keyspace is the number of possible keys to a cipher.",
+          "zh": "密钥空间指某种密码可能使用的密钥数量。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "7-20",
+          "en": "True or False? Revocation is a security measure that stops authorization for access to data.",
+          "zh": "撤销是一种终止数据访问授权的安全措施。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        }
+      ]
+    },
+    {
+      "id": "ch8-mc",
+      "title": "Ch8 · Multiple choice",
+      "titleZh": "Ch8 · 选择题",
+      "questions": [
+        {
+          "id": "8-1",
+          "en": "What is  not  a typical sign of virus activity on a system?",
+          "zh": "哪项不是系统中病毒活动的典型迹象？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Unexplained decrease in available disk space",
+              "zh": "可用磁盘空间无故减少"
+            },
+            {
+              "id": "o1",
+              "en": "Unexpected error messages",
+              "zh": "意外错误消息"
+            },
+            {
+              "id": "o2",
+              "en": "Unexpected power failures",
+              "zh": "意外断电"
+            },
+            {
+              "id": "o3",
+              "en": "Sudden sluggishness of applications",
+              "zh": "应用突然变慢"
+            }
+          ],
+          "answer": "o2",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "8-2",
+          "en": "Larry recently viewed an auction listing on a website. As a result, his computer executed code that popped up a window that asked for his password. What type of attack has Larry likely encountered?",
+          "zh": "Larry最近浏览了网站上的一条拍卖商品信息。随后，他的计算机执行了代码，弹出一个索要密码的窗口。Larry最可能遭遇了哪种攻击？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Structured Query Language (SQL) injection",
+              "zh": "SQL注入"
+            },
+            {
+              "id": "o1",
+              "en": "Command injection",
+              "zh": "命令注入"
+            },
+            {
+              "id": "o2",
+              "en": "Extensible Markup Language (XML) injection",
+              "zh": "XML注入"
+            },
+            {
+              "id": "o3",
+              "en": "Cross-site scripting (XSS)",
+              "zh": "跨站脚本攻击"
+            }
+          ],
+          "answer": "o3",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "8-3",
+          "en": "The chief executive officer (CEO) of a company recently fell victim to an attack. The attackers sent the CEO an email that appeared to come from the company's attorney. The email informed the CEO that his company was being sued and he needed to view a subpoena at a court website. When visiting the website, malicious code was downloaded onto the CEO's computer. What type of attack took place?",
+          "zh": "一家公司的首席执行官（CEO）最近遭遇攻击。攻击者发来的邮件看起来来自公司律师，声称公司正在被起诉，CEO需要访问法院网站查看传票。访问该网站时，恶意代码被下载到了CEO的计算机上。这是什么攻击？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Spear phishing",
+              "zh": "鱼叉式网络钓鱼"
+            },
+            {
+              "id": "o1",
+              "en": "Pharming",
+              "zh": "域名欺骗／网站重定向欺诈"
+            },
+            {
+              "id": "o2",
+              "en": "Ransomware",
+              "zh": "勒索软件"
+            },
+            {
+              "id": "o3",
+              "en": "Command injection",
+              "zh": "命令注入"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "8-4",
+          "en": "Which of the following is a type of denial of service (DoS) attack?",
+          "zh": "以下哪项属于拒绝服务攻击？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Logic bomb",
+              "zh": "逻辑炸弹"
+            },
+            {
+              "id": "o1",
+              "en": "Synchronize (SYN) flood",
+              "zh": "SYN洪泛攻击"
+            },
+            {
+              "id": "o2",
+              "en": "Cross-site scripting (XSS)",
+              "zh": "跨站脚本攻击"
+            },
+            {
+              "id": "o3",
+              "en": "Structured Query Language (SQL) injection",
+              "zh": "SQL注入"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "8-5",
+          "en": "Karen is a hacker. She wants to access a server and control it remotely. The tool she plans to use is a type of Trojan. What tool will Karen use for this purpose?",
+          "zh": "Karen是一名黑客。她希望访问一台服务器并远程控制它。她计划使用的工具是一种木马。Karen会使用什么工具？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Ping",
+              "zh": "Ping连通性检测"
+            },
+            {
+              "id": "o1",
+              "en": "Simple Network Management Protocol (SNMP) agent",
+              "zh": "SNMP代理"
+            },
+            {
+              "id": "o2",
+              "en": "Network mapper (Nmap)",
+              "zh": "Nmap网络扫描工具"
+            },
+            {
+              "id": "o3",
+              "en": "Remote Access Tool (RAT)",
+              "zh": "远程访问工具"
+            }
+          ],
+          "answer": "o3",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "8-6",
+          "en": "Bob is developing a web application that depends on a backend database. What type of attack could a malicious individual use to send commands through his web application to the database?",
+          "zh": "Bob正在开发一个依赖后台数据库的网页应用程序。恶意人员可以使用哪种攻击，通过他的网页应用程序向数据库发送命令？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Cross-site scripting (XSS)",
+              "zh": "跨站脚本攻击"
+            },
+            {
+              "id": "o1",
+              "en": "Extensible Markup Language (XML) injection",
+              "zh": "XML注入"
+            },
+            {
+              "id": "o2",
+              "en": "Structured Query Language (SQL) injection",
+              "zh": "SQL注入"
+            },
+            {
+              "id": "o3",
+              "en": "Lightweight Directory Access Protocol (LDAP) injection",
+              "zh": "LDAP注入"
+            }
+          ],
+          "answer": "o2",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "8-7",
+          "en": "Alison is a security professional. A user reports that, after opening an email attachment, every document he saves is in a template format and other Microsoft Word documents will not open. After investigating the issue, Alison determines that the user's Microsoft Office normal.dot template has been damaged, as well as many Word files. What type of virus is the most likely cause?",
+          "zh": "Alison是一名安全专业人员。一名用户报告，打开邮件附件后，他保存的每个文档都变成模板格式，而其他Microsoft Word文档无法打开。调查后，Alison发现用户的Microsoft Office normal.dot模板和许多Word文件都已损坏。最可能是哪种病毒造成的？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Polymorphic virus",
+              "zh": "多态病毒"
+            },
+            {
+              "id": "o1",
+              "en": "Retro virus",
+              "zh": "反杀毒病毒"
+            },
+            {
+              "id": "o2",
+              "en": "Cross-platform virus",
+              "zh": "跨平台病毒"
+            },
+            {
+              "id": "o3",
+              "en": "Macro virus",
+              "zh": "宏病毒"
+            }
+          ],
+          "answer": "o3",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "8-8",
+          "en": "What tool might be used by an attacker during the reconnaissance phase of an attack to glean information about domain registrations?",
+          "zh": "攻击者在侦察阶段使用什么工具查询域名注册信息？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Whois",
+              "zh": "域名注册查询工具"
+            },
+            {
+              "id": "o1",
+              "en": "Simple Network Management Protocol (SNMP)",
+              "zh": "简单网络管理协议"
+            },
+            {
+              "id": "o2",
+              "en": "Ping",
+              "zh": "Ping连通性检测"
+            },
+            {
+              "id": "o3",
+              "en": "Domain Name System (DNS)",
+              "zh": "域名系统"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "8-9",
+          "en": "Lin installed a time-management utility that she downloaded from the Internet. Now several applications are not responding to normal commands. What type of malware did she likely encounter?",
+          "zh": "Lin安装了一个从互联网下载的时间管理工具。现在，多个应用程序无法响应正常命令。她最可能遭遇了哪种恶意软件？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Virus",
+              "zh": "病毒"
+            },
+            {
+              "id": "o1",
+              "en": "Worm",
+              "zh": "蠕虫"
+            },
+            {
+              "id": "o2",
+              "en": "Ransomware",
+              "zh": "勒索软件"
+            },
+            {
+              "id": "o3",
+              "en": "Trojan horse",
+              "zh": "特洛伊木马"
+            }
+          ],
+          "answer": "o3",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "8-10",
+          "en": "Devaki is investigating an attack. An intruder managed to take over the identity of a user who was legitimately logged in to Devaki's company's website by manipulating Hypertext Transfer Protocol (HTTP) headers. Which type of attack likely took place?",
+          "zh": "Devaki正在调查一次攻击。入侵者通过操纵超文本传输协议（HTTP）标头，成功接管了一名已合法登录公司网站的用户身份。最可能发生了哪种攻击？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Session hijacking",
+              "zh": "会话劫持"
+            },
+            {
+              "id": "o1",
+              "en": "Extensible Markup Language (XML) injection",
+              "zh": "XML注入"
+            },
+            {
+              "id": "o2",
+              "en": "Cross-site scripting (XSS)",
+              "zh": "跨站脚本攻击"
+            },
+            {
+              "id": "o3",
+              "en": "Structured Query Language (SQL) injection",
+              "zh": "SQL注入"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        }
+      ]
+    },
+    {
+      "id": "ch8-tf",
+      "title": "Ch8 · True / False",
+      "titleZh": "Ch8 · 判断题",
+      "questions": [
+        {
+          "id": "8-11",
+          "en": "True or False? The success of Trojans is due to their reliance on social engineering to spread and operate; they have to trick users into running them.",
+          "zh": "木马依靠社会工程传播和运行，必须诱骗用户执行。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "8-12",
+          "en": "True or False? Security breaches perpetrated by current and former employees often go undetected due to weak personnel and security policies or ineffective countermeasures.",
+          "zh": "薄弱的人员和安全策略或无效对策，可能导致现任及前任员工的安全违规未被发现。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "8-13",
+          "en": "True or False? The function of homepage hijacking is to change a browser's homepage to point to the attacker's site.",
+          "zh": "主页劫持会把浏览器主页改为攻击者的网站。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "8-14",
+          "en": "True or False? A backdoor is a hidden way to bypass access controls and allow access to a system or resource.",
+          "zh": "后门是绕过访问控制、进入系统或资源的隐藏方式。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "8-15",
+          "en": "True or False? Unlike viruses, worms do not require a host program to survive and replicate.",
+          "zh": "与病毒不同，蠕虫不依赖宿主程序生存和复制。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "8-16",
+          "en": "True or False? Defense in depth is the practice of layering defenses to increase overall security and provide more reaction time to respond to incidents.",
+          "zh": "纵深防御通过多层防护提高整体安全性，并增加事件响应时间。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "8-17",
+          "en": "True or False? Worms operate by encrypting important files or even the entire storage device and making them inaccessible.",
+          "zh": "蠕虫通过加密重要文件甚至整个存储设备，使其无法访问。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "Encrypting files and demanding recovery is associated with ransomware, not the defining behavior of worms.",
+          "explanationZh": "加密文件使其无法访问描述的是勒索软件，不是蠕虫的定义。"
+        },
+        {
+          "id": "8-18",
+          "en": "True or False? Because people inside an organization generally have more detailed knowledge of the IT infrastructure than outsiders do, they can place logic bombs more easily.",
+          "zh": "内部人员更了解IT基础设施，因此更容易植入逻辑炸弹。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "8-19",
+          "en": "True or False? Hijacking refers to the use of social engineering to obtain access credentials, such as usernames and passwords.",
+          "zh": "劫持指通过社会工程获取用户名和密码等访问凭据。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "This describes credential harvesting.",
+          "explanationZh": "这里描述的是凭据收集。"
+        },
+        {
+          "id": "8-20",
+          "en": "True or False? Attackers have established thousands of botnets, which they use to distribute malware and spam and to launch denial of service (DoS) attacks against organizations or even countries.",
+          "zh": "攻击者建立僵尸网络，用来传播恶意软件、发送垃圾邮件和发动拒绝服务攻击。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        }
+      ]
+    },
+    {
+      "id": "ch9-mc",
+      "title": "Ch9 · Multiple choice",
+      "titleZh": "Ch9 · 选择题",
+      "questions": [
+        {
+          "id": "9-1",
+          "en": "In an accreditation process, who has the authority to approve a system for implementation?",
+          "zh": "系统认可过程中，谁有权批准系统投入使用？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Certifier",
+              "zh": "认证评估人员"
+            },
+            {
+              "id": "o1",
+              "en": "Authorizing official (AO)",
+              "zh": "授权官员"
+            },
+            {
+              "id": "o2",
+              "en": "System owner",
+              "zh": "系统所有者"
+            },
+            {
+              "id": "o3",
+              "en": "System administrator",
+              "zh": "系统管理员"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "9-2",
+          "en": "What is the least likely goal of an information security awareness program?",
+          "zh": "哪项最不可能是信息安全意识计划的目标？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Teach users about security objectives",
+              "zh": "讲解安全目标"
+            },
+            {
+              "id": "o1",
+              "en": "Inform users about trends and threats in security",
+              "zh": "告知安全趋势和威胁"
+            },
+            {
+              "id": "o2",
+              "en": "Motivate users to comply with security policy",
+              "zh": "鼓励遵守安全策略"
+            },
+            {
+              "id": "o3",
+              "en": "Punish users who violate policy",
+              "zh": "惩罚违反策略的用户"
+            }
+          ],
+          "answer": "o3",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "9-3",
+          "en": "Hajar is a network engineer. She is creating a system of access involving clearance and classification based on users and the objects they need in a secure network. She is restricting access to secure objects by users based on least privilege and which of the following?",
+          "zh": "Hajar是一名网络工程师。她正在为安全网络建立访问体系，根据用户及其所需对象设置安全许可与分类。她根据最小权限及以下哪项原则，限制用户访问安全对象？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Job rotation",
+              "zh": "岗位轮换"
+            },
+            {
+              "id": "o1",
+              "en": "Security awareness",
+              "zh": "安全意识"
+            },
+            {
+              "id": "o2",
+              "en": "Need to know",
+              "zh": "按需知悉"
+            },
+            {
+              "id": "o3",
+              "en": "Separation of duties",
+              "zh": "职责分离"
+            }
+          ],
+          "answer": "o2",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "9-4",
+          "en": "Mia is her company's network security professional. She is developing access policies based on personnel security principles. As part of this effort, she is devising a method of taking high-security tasks and splitting them among several different employees so that no one person is responsible for knowing and performing the entire task. What practice is she developing?",
+          "zh": "Mia是公司的网络安全专业人员，正在依据人员安全原则制定访问策略。她把高安全要求的任务拆分给多名不同员工，使任何一个人都不负责掌握并执行整个任务。她正在制定哪种做法？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Job rotation",
+              "zh": "岗位轮换"
+            },
+            {
+              "id": "o1",
+              "en": "Limiting access",
+              "zh": "限制访问"
+            },
+            {
+              "id": "o2",
+              "en": "Mandatory vacations",
+              "zh": "强制休假"
+            },
+            {
+              "id": "o3",
+              "en": "Separation of duties",
+              "zh": "职责分离"
+            }
+          ],
+          "answer": "o3",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "9-5",
+          "en": "Antivirus, firewall, and email use policies belong to what part of a security policy hierarchy?",
+          "zh": "防病毒、防火墙和邮件使用策略属于策略层级的哪部分？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Environment",
+              "zh": "环境"
+            },
+            {
+              "id": "o1",
+              "en": "Functional policies in support of organization policy",
+              "zh": "支持组织策略的职能性策略"
+            },
+            {
+              "id": "o2",
+              "en": "Organizational security policy",
+              "zh": "组织安全策略"
+            },
+            {
+              "id": "o3",
+              "en": "Supporting mechanisms",
+              "zh": "支持机制"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "9-6",
+          "en": "Rodrigo has just received an email at work from an unknown person. The sender claims to have incriminating evidence against Rodrigo and threatens to release it to his employer and his family unless he discloses certain confidential information about his employer's company. Rodrigo does not know that several other people in the organization received the same email. What form of social engineering has occurred?",
+          "zh": "Rodrigo在工作中收到一封陌生人的邮件。发件人声称掌握对他不利的证据，威胁他泄露公司某些机密信息，否则将证据发给其雇主和家人。Rodrigo不知道组织内还有其他几个人收到相同邮件。这属于哪种社会工程手段？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Intimidation",
+              "zh": "恐吓"
+            },
+            {
+              "id": "o1",
+              "en": "Name dropping",
+              "zh": "借用他人名号"
+            },
+            {
+              "id": "o2",
+              "en": "Appeal for help",
+              "zh": "请求帮助"
+            },
+            {
+              "id": "o3",
+              "en": "Phishing",
+              "zh": "网络钓鱼"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "9-7",
+          "en": "Janette is the director of her company's network infrastructure group. She is explaining to the business owners the advantages and disadvantages of outsourcing network security. One consideration she presents is the question of who would be responsible for the data, media, and infrastructure. What consideration is she describing?",
+          "zh": "Janette是公司网络基础设施团队主管。她正在向企业所有者解释网络安全外包的优缺点。她提出的一个考虑因素是：谁将负责数据、存储介质和基础设施？她描述的是哪方面的考虑？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Adherence to policy",
+              "zh": "遵守策略"
+            },
+            {
+              "id": "o1",
+              "en": "Ownership",
+              "zh": "所有权与责任归属"
+            },
+            {
+              "id": "o2",
+              "en": "Privacy",
+              "zh": "隐私"
+            },
+            {
+              "id": "o3",
+              "en": "Risk",
+              "zh": "风险"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "9-8",
+          "en": "Lin is creating a template for the configuration of Windows servers in her organization. The configuration includes the basic security settings that should apply to all systems. What type of document should she create?",
+          "zh": "Lin正在为组织内的Windows服务器创建配置模板，其中包含所有系统都应该采用的基本安全设置。她应创建哪类文档？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Baseline",
+              "zh": "基线"
+            },
+            {
+              "id": "o1",
+              "en": "Policy",
+              "zh": "策略"
+            },
+            {
+              "id": "o2",
+              "en": "Guideline",
+              "zh": "指南"
+            },
+            {
+              "id": "o3",
+              "en": "Procedure",
+              "zh": "操作规程"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "9-9",
+          "en": "Bob is preparing to dispose of magnetic media and wishes to destroy the data stored on it. Which method is not a good approach for destroying data?",
+          "zh": "Bob准备处置磁性存储介质，并希望销毁其中存储的数据。哪种方法不适合销毁数据？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Formatting",
+              "zh": "格式化"
+            },
+            {
+              "id": "o1",
+              "en": "Degaussing",
+              "zh": "消磁"
+            },
+            {
+              "id": "o2",
+              "en": "Physical destruction",
+              "zh": "物理销毁"
+            },
+            {
+              "id": "o3",
+              "en": "Repeatedly overwriting data",
+              "zh": "反复覆盖数据"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "9-10",
+          "en": "Mark is considering outsourcing security functions to a third-party service provider. What benefit is he most likely to achieve?",
+          "zh": "Mark正在考虑将安全职能外包给第三方服务提供商。他最有可能获得什么好处？",
+          "options": [
+            {
+              "id": "o0",
+              "en": "Higher degree of privacy",
+              "zh": "更高程度的隐私"
+            },
+            {
+              "id": "o1",
+              "en": "Access to a higher level of expertise",
+              "zh": "更高水平的专业知识和技能"
+            },
+            {
+              "id": "o2",
+              "en": "Developing in-house talent",
+              "zh": "培养内部人才"
+            },
+            {
+              "id": "o3",
+              "en": "Building internal knowledge",
+              "zh": "积累内部知识"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "",
+          "explanationZh": ""
+        }
+      ]
+    },
+    {
+      "id": "ch9-tf",
+      "title": "Ch9 · True / False",
+      "titleZh": "Ch9 · 判断题",
+      "questions": [
+        {
+          "id": "9-11",
+          "en": "True or False? The idea that users should be granted only the levels of permissions they need to perform their duties is called the principle of least privilege.",
+          "zh": "只授予完成职责所需权限，称为最小权限原则。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "9-12",
+          "en": "True or False? Mandatory vacations minimize risk by rotating employees among various systems or duties.",
+          "zh": "强制休假通过在不同系统或职责之间轮换员工来降低风险。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "This describes job rotation.",
+          "explanationZh": "这里描述的是岗位轮换。"
+        },
+        {
+          "id": "9-13",
+          "en": "True or False? The process of remediation makes sure all personnel are aware of and comply with an organization's policies.",
+          "zh": "整改过程确保所有人员了解并遵守组织策略。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "Remediation fixes identified issues.",
+          "explanationZh": "整改是修复发现的问题。"
+        },
+        {
+          "id": "9-14",
+          "en": "True or False? Change does not create risk for a business.",
+          "zh": "变更不会给企业带来风险。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "9-15",
+          "en": "True or False? Procedures help enforce the intent of a policy.",
+          "zh": "操作规程有助于落实策略的意图。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "9-16",
+          "en": "True or False? The term \"data owner\" refers to the person or group that manages an IT infrastructure.",
+          "zh": "数据所有者指管理IT基础设施的个人或团队。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "9-17",
+          "en": "True or False? A functional policy declares an organization's management direction for security in such specific functional areas as email use, remote access, and Internet interaction (including social media).",
+          "zh": "职能性策略规定邮件、远程访问和互联网互动等具体领域的安全管理方向。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "9-18",
+          "en": "True or False? Configuration changes can be made at any time during a system life cycle, and no process is required.",
+          "zh": "系统生命周期内可以随时更改配置，无需任何流程。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o1",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "9-19",
+          "en": "True or False? A security awareness program should address the requirements and expectations of an organization's security policy.",
+          "zh": "安全意识计划应涵盖组织安全策略的要求和期望。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        },
+        {
+          "id": "9-20",
+          "en": "True or False? Standards are mandated requirements for hardware and software solutions used to address security risk throughout an organization.",
+          "zh": "标准是组织为应对安全风险而对硬件和软件解决方案制定的强制性要求。",
+          "options": [
+            {
+              "id": "o0",
+              "en": "True",
+              "zh": "正确"
+            },
+            {
+              "id": "o1",
+              "en": "False",
+              "zh": "错误"
+            }
+          ],
+          "answer": "o0",
+          "explanationEn": "",
+          "explanationZh": ""
+        }
+      ]
+    }
+  ]
+}</script>
+<script>
+'use strict';
+const DEFAULT_BANK=JSON.parse(document.getElementById('bank').textContent);
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const STORAGE='cyb-study-studio-v1';let bank=DEFAULT_BANK,state,all={},terms=[],modal=null,modalZh=false,tipIndex=[],displayedResult=null,currentGlossary={};
+const palettes=[['#fff4ed','#f0dacb','#bd8057'],['#eff6ff','#d5e3f7','#6c91bd'],['#f3f0ff','#e0d8f7','#9275bf'],['#edf8f3','#d3eadf','#639a82'],['#fff5f4','#f1dad8','#c48280'],['#fff9e9','#eee2bf','#b99c52']];
+function fresh(){return {unit:0,active:null,results:{},pending:[],lastLayouts:{},zh:false};}
+function validate(b){if(!b||typeof b.id!=='string'||!b.id||!Array.isArray(b.units)||!b.units.length)throw Error('Missing id or units / 缺少id或单元');const ids=new Set(),uids=new Set();for(const u of b.units){if(!u.id||uids.has(u.id)||!u.title||!Array.isArray(u.questions)||!u.questions.length)throw Error('Invalid or duplicate unit / 单元无效或重复');uids.add(u.id);for(const q of u.questions){if(!q.id||ids.has(q.id)||typeof q.en!=='string'||typeof q.zh!=='string'||!Array.isArray(q.options)||q.options.length<2||q.options.length>6)throw Error('Invalid question / 题目格式有误');ids.add(q.id);const opts=new Set();for(const o of q.options){if(!o.id||opts.has(o.id)||typeof o.en!=='string'||typeof o.zh!=='string')throw Error('Invalid option / 选项格式有误');opts.add(o.id);}if(!opts.has(q.answer))throw Error('Answer must match an option id / 答案须匹配选项id');}}if(b.glossary&&(!Object.values(b.glossary).every(x=>typeof x==='string')))throw Error('Glossary meanings must be text / 词义须为文本');return true;}
+function index(){all={};bank.units.forEach(u=>u.questions.forEach(q=>all[q.id]=q));terms=Object.entries(bank.glossary||{}).filter(([a,b])=>a&&b).sort((a,b)=>b[0].length-a[0].length);}
+function persist(){try{localStorage.setItem(STORAGE,JSON.stringify({bank,state}));}catch(e){$('#message').textContent='Progress could not be saved / 浏览器未能保存进度';}}
+function shuffle(a){a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function newLayout(q){const last=state.lastLayouts[q.id];let order=shuffle(q.options.map(o=>o.id));if(last){let tries=0;while(order.some((id,i)=>id===last.order[i])&&tries++<40)order=shuffle(order);if(order.some((id,i)=>id===last.order[i])){order=[...last.order];order.push(order.shift());}}let colors=shuffle(palettes.map((_,i)=>i)).slice(0,order.length);if(last){let tries=0;while(colors.some((c,i)=>c===last.colors[last.order.indexOf(order[i])])&&tries++<40)colors=shuffle(palettes.map((_,i)=>i)).slice(0,order.length);if(colors.some((c,i)=>c===last.colors[last.order.indexOf(order[i])]))colors=order.map(id=>(last.colors[last.order.indexOf(id)]+1)%palettes.length);}const layout={order,colors};state.lastLayouts[q.id]=layout;return layout;}
+function start(n){state.unit=n;state.zh=false;const native=bank.units[n].questions.map(q=>q.id);const review=state.pending.filter(id=>all[id]&&!native.includes(id));const queue=[...native,...review];state.active={unit:n,queue,nativeCount:native.length,pos:0,responses:[],layouts:queue.map(id=>newLayout(all[id]))};persist();render();}
+function wordText(text){let out='',i=0;const low=text.toLowerCase();while(i<text.length){const entry=terms.find(([term])=>low.startsWith(term.toLowerCase(),i)&&(!i||!/[a-z0-9]/i.test(text[i-1]))&&(i+term.length===text.length||!/[a-z0-9]/i.test(text[i+term.length])));if(entry){const ix=tipIndex.push([text.slice(i,i+entry[0].length),currentGlossary[entry[0].toLowerCase()]||entry[1]])-1;out+=`<button class="word" data-word="${ix}" aria-label="Translate ${esc(entry[0])}">${esc(text.slice(i,i+entry[0].length))}</button>`;i+=entry[0].length;}else{out+=esc(text[i]);i++;}}return out;}
+function switchUnit(n){if(state.active&&n===state.unit)return;if(state.active&&!confirm('Leave this attempt? Completed answers and mistakes are saved. / 离开本次练习？已答题和错题仍保留。')){$('#unit-select').value=state.unit;return;}state.active=null;state.unit=n;persist();render();}
+function nav(){ $('#unit-select').innerHTML=bank.units.map((u,i)=>`<option value="${i}" ${i===state.unit?'selected':''}>${esc(u.title)} / ${esc(u.titleZh||'')}</option>`).join(''); $('#units').innerHTML=bank.units.map((u,i)=>`<button class="unit ${i===state.unit?'active':''}" data-unit="${i}" ${i===state.unit?'aria-current="step"':''}><span class="num">${String(i+1).padStart(2,'0')}</span><span><strong>${esc(u.title)}</strong><small>${esc(u.titleZh||'')} · ${u.questions.length} questions</small></span>${state.results[u.id]?'<span class="done">✓</span>':''}</button>`).join('');}
+function render(){tipIndex=[];hideTip();nav();const u=bank.units[state.unit];$('#title').textContent=u.title;$('#subtitle').textContent=(u.titleZh||'')+' · Choose to continue. Tap a question number to revisit. 选答后自动前进，点题号可回看和改选。';$('#pending').textContent=state.pending.length;const a=state.active;if(!a){const r=state.results[u.id];if(r){summary(r);return;}$('#stage').innerHTML=`<div class="empty"><div class="eyebrow">READY WHEN YOU ARE</div><h2>Your next small win.</h2><p class="sub">${u.questions.length} questions · No timer<br>${state.pending.length} unresolved review questions / 待复习错题</p><button class="primary" data-start="${state.unit}">Start unit / 开始本单元 →</button></div>`;$('#map').innerHTML='';return;}if(a.pos>=a.queue.length){finish();return;}const q=all[a.queue[a.pos]],layout=a.layouts[a.pos];currentGlossary=q.glossary||{};$('#map').innerHTML=a.queue.map((id,i)=>`<button class="dot ${i===a.pos?'current':a.responses[i]?'answered':''}" data-jump="${i}" aria-label="Question ${i+1}${a.responses[i]?' answered / 已答，可重选':' / 未答'}" ${i===a.pos?'aria-current="step"':''} title="${i>=a.nativeCount?'Carry-over review / 前面错题':'Unit question / 本单元题目'}">${i+1}</button>`).join('');$('#stage').innerHTML=`<div class="question-head"><span class="badge">QUESTION ${String(a.pos+1).padStart(2,'0')} / ${a.queue.length}</span><button class="translate" data-translate>${state.zh?'Hide 中文':'中文 / Translate'}</button></div><div class="progress"><i style="width:${a.responses.filter(Boolean).length/a.queue.length*100}%"></i></div>${a.pos>=a.nativeCount?'<div class="reviewlabel">↺ CARRY-OVER REVIEW / 前面单元错题</div>':''}<div class="question">${wordText(q.en)}</div>${state.zh?`<div class="cn">${esc(q.zh)}</div>`:''}<p class="hint">Tap dotted words for meaning · 点虚线词查词，不会选中答案</p><div class="options">${layout.order.map((id,i)=>{const o=q.options.find(o=>o.id===id),p=palettes[layout.colors[i]];return `<div class="option ${a.responses[a.pos]?.selected===id?'selected':''}" data-answer="${esc(id)}" style="--tint:${p[0]};--edge:${p[1]};--tone:${p[2]}"><button class="letter" aria-label="Choose option ${'ABCDEF'[i]}" aria-pressed="${a.responses[a.pos]?.selected===id}">${'ABCDEF'[i]}</button><div class="option-text">${wordText(o.en)}${state.zh?`<div class="cn">${esc(o.zh)}</div>`:''}</div></div>`;}).join('')}</div>${a.responses[a.pos]?'<div class="selection-note">Your saved choice is outlined. Select again to change it. / 已选答案有描边，点击其他选项即可修改。</div>':''}<div class="nav-controls"><button class="secondary" data-jump="${a.pos-1}" ${a.pos===0?'disabled':''}>← Previous / 上一题</button><span style="font-size:11px;color:#999">${a.responses.filter(Boolean).length} / ${a.queue.length} answered · 已答</span>${a.pos<a.queue.length-1?`<button class="secondary" data-jump="${a.pos+1}">Next / 下一题 →</button>`:''}${allAnswered(a)?'<button class="primary" data-finish>Results / 单元结果 →</button>':''}</div><div class="foot"><span>Choose a letter to answer · 点字母作答</span><span>${a.nativeCount} new + ${a.queue.length-a.nativeCount} review · 新题＋复习</span></div>`;}
+function allAnswered(a){return a.queue.every((_,i)=>!!a.responses[i]);}
+function jump(pos){const a=state.active;if(!a){resumeResult(pos);return;}if(!Number.isInteger(pos)||pos<0||pos>=a.queue.length)return;a.pos=pos;state.zh=false;persist();render();}
+function resumeResult(pos){const r=displayedResult||state.results[bank.units[state.unit].id];if(!r||!r.responses[pos])return;state.active={unit:r.unit,queue:r.responses.map(x=>x.id),nativeCount:r.nativeCount,practiceOnly:!!r.practiceOnly,editing:true,pos,responses:r.responses.map(x=>({...x})),layouts:r.responses.map(x=>x.layout)};state.unit=r.unit;state.zh=false;persist();render();}
+function saveEditedResult(a){if(a.editing&&!a.practiceOnly)state.results[bank.units[a.unit].id]={unit:a.unit,responses:a.responses.map(x=>({...x})),nativeCount:a.nativeCount,finished:Date.now(),practiceOnly:false};}
+function choose(id){const a=state.active;if(!a||a.pos>=a.queue.length)return;const q=all[a.queue[a.pos]];if(!q.options.some(o=>o.id===id))return;const correct=id===q.answer;a.responses[a.pos]={id:q.id,selected:id,correct,isReview:a.pos>=a.nativeCount,layout:a.layouts[a.pos]};state.pending=state.pending.filter(x=>x!==q.id);if(!correct)state.pending.push(q.id);saveEditedResult(a);a.pos++;if(a.pos>=a.queue.length&&!allAnswered(a))a.pos=a.queue.findIndex((_,i)=>!a.responses[i]);state.zh=false;persist();render();}
+function finish(){const a=state.active;const r={unit:a.unit,responses:a.responses,finished:Date.now(),nativeCount:a.nativeCount,practiceOnly:!!a.practiceOnly};if(!a.practiceOnly)state.results[bank.units[a.unit].id]=r;state.active=null;persist();summary(r);}
+function resultCards(rs){return rs.map(r=>{const q=all[r.id],answer=q.options.find(o=>o.id===q.answer);return `<button class="answer-card" data-review="${esc(r.id)}"><span class="status ${r.correct?'':'wrong'}">${r.correct?'✓ Correct / 正确':'↺ Review / 错误'}</span><span style="font-size:10px;color:#aaa;margin-left:6px">${esc(q.id)}</span><span class="answer-name">${esc(answer.en)}</span><span class="mini">${esc(q.en)}</span><span class="mini">Open review / 点击打开复习窗口 →</span></button>`;}).join('');}
+function summary(r){displayedResult=r;tipIndex=[];const unit=bank.units[r.unit],native=r.responses.filter(x=>!x.isReview),reviews=r.responses.filter(x=>x.isReview),score=(r.practiceOnly?r.responses:native).filter(x=>x.correct).length;$('#map').innerHTML=r.responses.map((x,i)=>`<button class="dot" data-jump="${i}" title="Revisit and change answer / 回看和重选 ${i+1}">${i+1}</button>`).join('');$('#pending').textContent=state.pending.length;$('#stage').innerHTML=`<span class="badge">UNIT COMPLETE / 单元完成</span><div class="summary-top"><div><h2 style="margin:0">A little more confident.</h2><p class="sub" style="margin:5px 0">Your answers, all in one place. 单元答案与回顾。</p></div><div class="score">${score}<small> / ${r.practiceOnly?r.responses.length:native.length}</small></div></div><div class="answer-grid">${resultCards(native)}</div>${reviews.length?`<h3>Carry-over review / 追加错题 ${reviews.filter(x=>x.correct).length} / ${reviews.length}</h3><div class="answer-grid">${resultCards(reviews)}</div>`:''}<div class="carry">${state.pending.length?'↺ '+state.pending.length+' unresolved questions will follow the next unit. / 未答对的题会追加到下一单元末尾。':'✓ All caught up. No unresolved questions. / 当前没有待复习错题。'}</div><div class="actions">${r.unit<bank.units.length-1?`<button class="primary" data-start="${r.unit+1}">Next unit / 下一单元 →</button>`:state.pending.length?'<button class="primary" data-wrong>Review remaining mistakes / 练习剩余错题 →</button>':'<button class="primary" data-start="0">Practice again / 从头练习 →</button>'}<button class="secondary" data-start="${r.unit}">Retry unit / 重做本单元</button></div>`;}
+function openReview(id){const r=displayedResult||state.results[bank.units[state.unit].id];if(!r)return;modal={responses:r.responses,index:r.responses.findIndex(x=>x.id===id)};modalZh=false;renderReview();$('#review').showModal();}
+function renderReview(){const r=modal.responses[modal.index],q=all[r.id];currentGlossary=q.glossary||{};tipIndex=[];$('#review-body').innerHTML=`<div class="modal-top"><span class="badge">REVIEW ${modal.index+1} / ${modal.responses.length} · ${esc(q.id)}</span><button class="close" data-close>Close / 关闭 ×</button></div><div class="question">${wordText(q.en)}</div><button class="translate" data-modal-translate>${modalZh?'Hide 中文':'中文 / Translate'}</button>${modalZh?`<p class="cn">${esc(q.zh)}</p>`:''}${r.layout.order.map((id,i)=>{const o=q.options.find(x=>x.id===id);return `<div class="review-option ${id===q.answer?'correct':id===r.selected?'wrong':''}"><b>${'ABCDEF'[i]}.</b> ${wordText(o.en)} ${id===q.answer?'<span class="status">✓ Correct answer / 正确答案</span>':''} ${id===r.selected?'<span class="status '+(r.correct?'':'wrong')+'">Your answer / 你的选择</span>':''}${modalZh?`<div class="cn">${esc(o.zh)}</div>`:''}</div>`;}).join('')}${q.explanationEn||q.explanationZh?`<div class="explain">${wordText(q.explanationEn||'')}${modalZh?`<div class="cn">${esc(q.explanationZh||'')}</div>`:''}</div>`:''}<div class="actions"><button class="primary" data-edit-question="${modal.index}">Change answer / 重新选择</button><button class="secondary" data-review-move="-1" ${modal.index===0?'disabled':''}>← Previous / 上一题</button><button class="primary" data-review-move="1" ${modal.index===modal.responses.length-1?'disabled':''}>Next / 下一题 →</button></div>`;}
+function hideTip(){$('#tooltip').hidden=true;}
+function showTip(el){const entry=tipIndex[+el.dataset.word];if(!entry)return;const tip=$('#tooltip');tip.innerHTML=`<b>${esc(entry[0])}</b>${esc(entry[1])}<small>Click elsewhere to close / 点击其他位置关闭</small>`;tip.hidden=false;const box=el.getBoundingClientRect(),w=tip.offsetWidth;tip.style.left=Math.max(10,Math.min(box.left,innerWidth-w-12))+'px';const h=tip.offsetHeight;tip.style.top=(box.bottom+h+16<innerHeight?box.bottom+8:Math.max(8,box.top-h-8))+'px';}
+document.addEventListener('click',e=>{const t=e.target,word=t.closest('[data-word]');if(word){e.preventDefault();e.stopPropagation();showTip(word);return;}hideTip();if(t.closest('[data-jump]')){const b=t.closest('[data-jump]');if(!b.disabled)jump(+b.dataset.jump);return;}if(t.closest('[data-finish]')){if(state.active&&allAnswered(state.active))finish();return;}if(t.closest('[data-edit-question]')){const pos=+t.closest('[data-edit-question]').dataset.editQuestion;$('#review').close();resumeResult(pos);return;}if(t.closest('[data-answer]')){choose(t.closest('[data-answer]').dataset.answer);return;}if(t.closest('[data-unit]')){const n=+t.closest('[data-unit]').dataset.unit;if(state.active&&n===state.unit)return;if(state.active&&!confirm('Leave this attempt? Completed answers and mistakes are saved. / 离开本次练习？已答题和错题仍保留。'))return;state.active=null;state.unit=n;persist();render();return;}if(t.closest('[data-start]')){start(+t.closest('[data-start]').dataset.start);return;}if(t.closest('[data-translate]')){state.zh=!state.zh;persist();render();return;}if(t.closest('[data-review]')){openReview(t.closest('[data-review]').dataset.review);return;}if(t.closest('[data-close]')){$('#review').close();render();return;}if(t.closest('[data-modal-translate]')){modalZh=!modalZh;renderReview();return;}if(t.closest('[data-review-move]')){modal.index+=+t.closest('[data-review-move]').dataset.reviewMove;renderReview();return;}if(t.closest('[data-wrong]')){const ids=[...state.pending];state.active={unit:state.unit,queue:ids,nativeCount:0,practiceOnly:true,pos:0,responses:[],layouts:ids.map(id=>newLayout(all[id]))};persist();render();}});
+$('#review').addEventListener('close',()=>{hideTip();render();});
+$('#unit-select').onchange=e=>switchUnit(+e.target.value);
+
+$('#import').onclick=()=>$('#file').click();$('#file').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{const b=JSON.parse(await f.text());validate(b);if(!confirm('Replace the bank and reset progress? / 替换题库并重置练习进度？'))return;bank=b;state=fresh();index();persist();render();$('#message').textContent='Question bank imported / 题库已导入';}catch(err){$('#message').textContent='Import failed / 导入失败: '+err.message;}finally{$('#file').value='';}};
+$('#export').onclick=()=>{const blob=new Blob([JSON.stringify(bank,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='question-bank.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+$('#reset').onclick=()=>{if(confirm('Reset all progress and mistakes? The question bank stays. / 清空练习进度及错题？题库保留。')){state=fresh();persist();render();}};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')hideTip();});window.addEventListener('resize',hideTip);window.addEventListener('scroll',hideTip,true);
+try{const saved=JSON.parse(localStorage.getItem(STORAGE)||'null');if(saved){validate(saved.bank);bank=saved.bank;state=saved.state;}}catch(e){}state=state||fresh();index();if(!Number.isInteger(state.unit)||state.unit<0||state.unit>=bank.units.length)state=fresh();render();
+window.QuizStudio={validate,getBank:()=>bank,getState:()=>state};
+</script></body></html>
